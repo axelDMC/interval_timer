@@ -31,6 +31,9 @@ class Activity:
                 print(f' Finish: {self.get_time()}')
                 break 
 
+    def start(self):
+        self.audio.play()
+
     def rest(self):
         self.new_activity("Rest", 5)
 
@@ -40,7 +43,8 @@ class Activity:
 
 activity = Activity()
 
-activity.new_activity("English", 0.1) ## minutes
+activity.start() ## Change the sound start for any more slighlty
+activity.new_activity("English", 30) ## minutes
 activity.rest()
 activity.new_activity("Startup", 10)
 activity.rest()
